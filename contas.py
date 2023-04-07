@@ -31,7 +31,8 @@ class ContaCorrente(Conta):
             print(f"Saldo insuficiente! Seu saldo é R$ {self.saldo:.2f}.")
 
     def detalhes(self):
-        return f"A conta de número {self.numero_conta}, da agência {self.agencia}, tem o saldo R$ {(self.saldo):.2f}, além de R$ {(self.saldo + self.limite_extra):.2f} em limite extra restante."
+        return f"A conta de número {self.numero_conta}, da agência {self.agencia}, "\
+            f"tem o saldo R$ {(self.saldo):.2f}, além de R$ {(self.saldo + self.limite_extra):.2f} em limite extra restante."
     
 class ContaPoupanca(Conta):
     def sacar(self, valor):
