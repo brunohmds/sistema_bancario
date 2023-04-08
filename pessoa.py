@@ -1,5 +1,3 @@
-import contas
-
 class Pessoa:
     def __init__(self, nome, idade):
         self._nome = nome
@@ -14,7 +12,9 @@ class Pessoa:
         return self._idade
     
     def __repr__(self):
-        return f"{(type(self).__name__)!r} {self._nome!r} tem {self.idade!r} anos." 
+        class_name = type(self).__name__
+        atributos = f'({self.nome!r}, {self.idade!r})'
+        return f'{class_name}{atributos}' 
         
         
 class Cliente(Pessoa):
